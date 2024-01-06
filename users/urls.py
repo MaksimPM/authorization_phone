@@ -15,7 +15,7 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-    path('verify/', VerificationView.as_view(), name='verification'),
+    path('verification/', VerificationView.as_view(), name='verification'),
     path('auth/', UserAuthenticationView.as_view(), name='user_authentication'),
     path('profile/', UserProfileView.as_view(), name='user_profile'),
 

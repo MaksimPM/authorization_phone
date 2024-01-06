@@ -38,9 +38,8 @@ class VerificationView(APIView):
             # Имитация отправки кода авторизации
             time.sleep(2)
 
-            print('otp_code:', otp_code)
-
-            return Response({'message': 'Code sent successfully'})
+            return Response({'message': 'Code sent successfully',
+                             'otp_code': otp_code})
 
         else:
             invite_code = ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase + string.digits, k=6))
@@ -49,9 +48,8 @@ class VerificationView(APIView):
             user = User.objects.create(phone_number=phone_number, invite_code=invite_code,
                                        otp_code=str(otp_code))  # Сохранение профиля в БД
 
-            print('otp_code:', otp_code)
-
-            return Response({'message': 'Code created successfully'})
+            return Response({'message': 'Code created successfully',
+                             'otp_code': otp_code})
 
 
 class UserAuthenticationView(APIView):

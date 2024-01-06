@@ -137,14 +137,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.User'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_PORT = 465
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
-EMAIL_USE_SSL = True
-
 SUPERUSER_EMAIL = os.getenv('SUPERUSER_EMAIL')
 SUPERUSER_PASSWORD = os.getenv('SUPERUSER_PASSWORD')
 SUPERUSER_FIRST_NAME = os.getenv('SUPERUSER_FIRST_NAME')
@@ -160,7 +152,3 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
-
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
-CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
-CELERY_TIMEZONE = "Europe/Moscow"
