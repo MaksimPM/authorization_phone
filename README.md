@@ -104,9 +104,9 @@ URL: /profile/
    ```
 
 3. Установите все необходимые зависимости, указанные в файле ```requirements.txt```
-```shell
-pip install -r requirements.txt
-```
+   ```shell
+   pip install -r requirements.txt
+   ```
 
 4. Произведите миграции базы данных командами
    ```shell
