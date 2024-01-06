@@ -129,11 +129,13 @@ URL: /profile/
 
 ## Запуск проекта с Docker
 
-1. Создать Docker контейнер командой:
+1. Создайте в корне проекта файл ```.env.docker``` и заполните данные по образцу из файла ```.env.docker.sample```
+
+2. Создать Docker контейнер командой:
 ```shell
 docker-compose build
 ```
-2. Запустить Docker контейнер командой:
+3. Запустить Docker контейнер командой:
 ```shell
 docker-compose up
 ```
